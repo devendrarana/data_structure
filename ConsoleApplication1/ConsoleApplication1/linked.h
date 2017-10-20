@@ -20,3 +20,4 @@ struct node *del(struct node *start, int data);
 struct node *reverse(struct node *start);
 int getMax(struct node *head);
 int getMin(struct node *head);
+void showdListOptions();
