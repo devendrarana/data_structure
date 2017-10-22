@@ -1,15 +1,9 @@
-#include<stdio.h>
-#include<std
 
+#include <stdio.h>
 
+#include<stdlib.h>
 
-
-
-
-
-
-
-/*struct node
+struct node
 {
     int info ;
     struct node *link;
@@ -244,6 +238,6 @@ struct node *reverse(struct node *start)
     }
     start=prev;
     return start;
-}*/
+}
 
 

@@ -1,10 +1,13 @@
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>
-struct StackNode
+struct StackNide
 {
 	int info;
-	struct StackNode *left;
-	struct StackNode *right;
+	struct StackNide *left;
+	struct StackNide *right;
 };
-
+void push();
+void pop();
+void display();
+void showStackOptions();
