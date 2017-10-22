@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "stack.h"
 
-struct StackNide *top = NULL;
+struct stack::StackNide *top = NULL;
 
-void showStackOptions() {
+void stack::showStackOptions() {
 	
 		int choice;
 		while (1) {
@@ -16,11 +16,11 @@ void showStackOptions() {
 			scanf("%d", &choice);
 			switch (choice)
 			{
-			case 1:push();
+			case 1:stack::push();
 				break;
-			case 2:pop();
+			case 2:stack::pop();
 				break;
-			case 3:display();
+			case 3:stack::display();
 				break;
 			case 4:exit(1);
 			default:
@@ -32,9 +32,9 @@ void showStackOptions() {
 
 
 
-void push()
+void stack::push()
 {
-	struct StackNide *tmp = (struct StackNide*)malloc(sizeof(struct StackNide));
+	struct stack::StackNide *tmp = (struct stack::StackNide*)malloc(sizeof(struct stack::StackNide));
 	printf("entre the data");
 	scanf("%d", &tmp->info);
 	if (top == NULL)
@@ -51,18 +51,18 @@ void push()
 	}
 }
 
-void pop()
+void stack::pop()
 {
-	struct StackNide *tmp;
+	struct stack::StackNide *tmp;
 	tmp = top;
 	top = top->right;
 	tmp->right->left = NULL;
 	free(tmp);
 }
 
-void display()
+void stack::display()
 {
-	struct StackNide *tmp;
+	struct stack::StackNide *tmp;
 	tmp = top;
 	while (tmp != NULL)
 	{
@@ -70,5 +70,3 @@ void display()
 		tmp = tmp->right;
 	}
 }
-
-

@@ -1,13 +1,16 @@
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>
-struct StackNide
+namespace stack
 {
-	int info;
-	struct StackNide *left;
-	struct StackNide *right;
-};
-void push();
-void pop();
-void display();
-void showStackOptions();
+	struct StackNide
+	{
+		int info;
+		struct StackNide *left;
+		struct StackNide *right;
+	};
+	void push();
+	void pop();
+	void display();
+	void showStackOptions();
+}

@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "linked.h"
 
-void showdListOptions() {
-	struct node *start = NULL;
+void link::showdListOptions() {
+	struct link::node *start = NULL;
 	int choice, data, item, pos;
 	while (1)
 	{
@@ -26,28 +26,28 @@ void showdListOptions() {
 		switch (choice)
 		{
 		case 1:
-			start = createlist(start);
+			start = link::createlist(start);
 			break;
 		case 2:
-			display(start);
+			link::display(start);
 			break;
 		case 3:
-			count(start);
+			link::count(start);
 			break;
 		case 4:
 			printf("enter the element to be search");
 			scanf("%d", &data);
-			search(start, data);
+			link::search(start, data);
 			break;
 		case 5:
 			printf("enter the element to be search");
 			scanf("%d", &data);
-			start = addatbeg(start, data);
+			start = link::addatbeg(start, data);
 			break;
 		case 6:
 			printf("enter the element to be inserted");
 			scanf("%d", &data);
-			start = addatend(start, data);
+			start = link::addatend(start, data);
 			break;
 
 		case 7:
@@ -55,40 +55,40 @@ void showdListOptions() {
 			scanf("%d", &data);
 			printf("enter the elmeent afer, to which insert");
 			scanf("%d", &item);
-			start = addafter(start, data, item);
+			start = link::addafter(start, data, item);
 			break;
 		case 8:
 			printf("enter the element to be inserted");
 			scanf("%d", &data);
 			printf("enter the elmeent before, to which insert");
 			scanf("%d", &item);
-			start = addbefore(start, data, item);
+			start = link::addbefore(start, data, item);
 			break;
 		case 9:
 			printf("enter the element to be inserted");
 			scanf("%d", &data);
 			printf("enter the elmeent afer, to which insert");
 			scanf("%d", &pos);
-			start = addatpos(start, data, pos);
+			start = link::addatpos(start, data, pos);
 			break;
 		case 10:
 			printf("enter the element to be inserted");
 			scanf("%d", &data);
 
-			start = del(start, data);
+			start = link::del(start, data);
 			break;
 		case 11:
-			start = reverse(start);
+			start = link::reverse(start);
 			break;
 		case 12: {
-			int max = getMax(start);
+			int max = link::getMax(start);
 			if (max != -1) {
 				printf(" the max is %d \n", max);
 			}
 			break;
 		}
 		case 13: {
-			int min = getMin(start);
+			int min = link::getMin(start);
 			if (min != -1) {
 				printf(" the min is %d \n", min);
 			}
@@ -102,7 +102,7 @@ void showdListOptions() {
 	}
 }
 
-int getMax(struct node *head) {
+int link::getMax(struct link::node *head) {
 
 	if (head == NULL) {
 		printf("Please pass a valid list head \n");
@@ -121,7 +121,7 @@ int getMax(struct node *head) {
 
 	return max;
 }
-int getMin(struct node *head) {
+int link::getMin(struct link::node *head) {
 
 	if (head == NULL) {
 		printf("Please pass a valid list head \n");
@@ -144,9 +144,9 @@ int getMin(struct node *head) {
 
 
 
-void display(struct node *start)
+void link::display(struct link::node *start)
 {
-	struct node *p;
+	struct link::node *p;
 	if (start == NULL)
 	{
 		printf("list is empty");
@@ -164,9 +164,9 @@ void display(struct node *start)
 
 
 
-void count(struct node *start)
+void link::count(struct link::node *start)
 {
-	struct node *p;
+	struct link::node *p;
 	int cnt = 0;
 	p = start;
 	while (p != NULL)
@@ -180,9 +180,9 @@ void count(struct node *start)
 
 
 
-void search(struct node *start, int data)
+void link::search(struct link::node *start, int data)
 {
-	struct node *p = start;
+	struct link::node *p = start;
 	int pos = 1;
 	while (p != NULL)
 	{
@@ -200,10 +200,10 @@ void search(struct node *start, int data)
 }
 
 
-struct node *addatbeg(struct node *start, int data)
+struct link::node* link::addatbeg(struct link::node *start, int data)
 {
-	struct node *tmp;
-	tmp = (struct node *)malloc(sizeof(struct node));
+	struct link::node *tmp;
+	tmp = (struct link::node *)malloc(sizeof(struct link::node));
 	tmp->info = data;
 	tmp->link = start;
 	start = tmp;
@@ -211,11 +211,11 @@ struct node *addatbeg(struct node *start, int data)
 }
 
 
-struct node *addatend(struct node *start, int data)
+struct link::node* link::addatend(struct link::node *start, int data)
 {
-	struct node *tmp;
-	tmp = (struct node *)malloc(sizeof(struct node));
-	struct node *p;
+	struct link::node *tmp;
+	tmp = (struct link::node *)malloc(sizeof(struct link::node));
+	struct link::node *p;
 	p = start;
 	while (p->link != NULL)
 	{
@@ -227,10 +227,10 @@ struct node *addatend(struct node *start, int data)
 	tmp->link = NULL;
 	return start;
 }
-struct node *addafter(struct node *start, int data, int item)
+struct link::node* link::addafter(struct link::node *start, int data, int item)
 {
-	struct node *tmp, *p;
-	tmp = (struct node *)malloc(sizeof(struct node *));
+	struct link::node *tmp, *p;
+	tmp = (struct link::node *)malloc(sizeof(struct link::node *));
 	p = start;
 	while (p != NULL)
 	{
@@ -252,11 +252,11 @@ struct node *addafter(struct node *start, int data, int item)
 
 
 }
-struct node *addbefore(struct node *start, int data, int item)
+struct link::node* link::addbefore(struct link::node *start, int data, int item)
 {
 
-	struct node *tmp, *p;
-	tmp = (struct node *)malloc(sizeof(struct node));
+	struct link::node *tmp, *p;
+	tmp = (struct link::node *)malloc(sizeof(struct link::node));
 	p = start;
 	while (p != NULL)
 	{
@@ -275,10 +275,10 @@ struct node *addbefore(struct node *start, int data, int item)
 
 }
 
-struct node *addatpos(struct node *start, int data, int pos)
+struct link::node* link::addatpos(struct link::node *start, int data, int pos)
 {
-	struct node *p, *tmp;
-	tmp = (struct node *)malloc(sizeof(struct node));
+	struct link::node *p, *tmp;
+	tmp = (struct link::node *)malloc(sizeof(struct link::node));
 	p = start;
 	int i;
 	for (i = 1; i < pos - 1 && p != NULL; i++)
@@ -293,7 +293,7 @@ struct node *addatpos(struct node *start, int data, int pos)
 
 	return start;
 }
-struct node *createlist(struct node *start)
+struct link::node* link::createlist(struct link::node *start)
 {
 	int i, n, data;
 	printf("enter the number of nodes to be inserted");
@@ -303,19 +303,19 @@ struct node *createlist(struct node *start)
 		return start;
 	printf("enter the data to be inserted ");
 	scanf_s("%d", &data);
-	start = addatbeg(start, data);
+	start = link::addatbeg(start, data);
 	for (i = 2; i <= n; i++)
 	{
 		printf("enter the data to be inserted ");
 		scanf_s("%d", &data);
-		start = addatend(start, data);
+		start = link::addatend(start, data);
 
 	}
 	return start;
 
 
 }
-struct node *del(struct node *start, int data)
+struct link::node* link::del(struct link::node *start, int data)
 {
 	struct node *tmp, *p;
 	if (start = NULL)
@@ -348,9 +348,9 @@ struct node *del(struct node *start, int data)
 	}
 	return start;
 }
-struct node *reverse(struct node *start)
+struct link::node* link::reverse(struct link::node *start)
 {
-	struct node *prev, *ptr, *next;
+	struct link::node *prev, *ptr, *next;
 	prev = NULL;
 	ptr = start;
 	while (ptr != NULL)
