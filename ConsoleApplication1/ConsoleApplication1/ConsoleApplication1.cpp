@@ -4,25 +4,25 @@
 #include "stdafx.h"
 #include "linked.h"
 #include "stack.h"
+#include "tree.h"
+int main(void) {
+	int choice,value;
+	while(1){
+		printf("1 insert\n 2 display\n 3 exit");
+		printf("entre your choice");
+		scanf("%d", &choice);
+		switch (choice) {
+		case 1:printf("entre the value to be inserted");
+				scanf("%d", &value);
+				break;
+		case 2:display(root);
+			break;
+		case 3:exit(0);
+		default:
+			printf("wrong choice");
+		}
 
-int main(void)
-{
-	int choice;
-	printf("Your Options \n ");
-	printf(" 1. LinkedList Operations \n");
-	printf(" 2. Stack Operations \n ");
-	scanf("%d", &choice);
-	switch (choice)
-	{
-	case 1:
-		showdListOptions();
-		break;
-	case 2:
-		showStackOptions();
-		break;
-	default:
-		break;
-	}
+
 }
 
-
+}
