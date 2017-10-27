@@ -8,6 +8,7 @@
 #include "file.h"
 #include "CircularLinkedList.h"
 #include "conversion.h"
+#include "doublelinked.h"
 int main(void)
 {
 	int choice;
@@ -18,6 +19,7 @@ int main(void)
 	printf(" 4. extraction of a file\n");
 	printf(" 5. circular linked list\n");
 	printf(" 6. conversion decimal and binary");
+	printf(" 7. doublelinkedlist");
 	scanf("%d",&choice);
 	switch (choice)
 	{
@@ -36,6 +38,9 @@ int main(void)
 	case 5:circularlinked();
 		break;
 	case 6:conversion();
+		break;
+	case 7:doublelinked();
+		break;
 	default:
 		printf("wrong choice");
 

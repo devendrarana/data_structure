@@ -52,6 +52,9 @@
     <ClInclude Include="conversion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="doublelinked.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -79,6 +82,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BinarytoDecimal .cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleLinked.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

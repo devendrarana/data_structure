@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="conversion.h" />
+    <ClInclude Include="doublelinked.h" />
     <ClInclude Include="file.h" />
     <ClInclude Include="func1.h" />
     <ClInclude Include="linked.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="BinarytoDecimal .cpp" />
     <ClCompile Include="CircularLinkedList.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="DoubleLinked.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="func1.cpp" />
     <ClCompile Include="linked.cpp" />
