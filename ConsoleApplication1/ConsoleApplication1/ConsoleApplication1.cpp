@@ -6,15 +6,18 @@
 #include "stack.h"
 #include "tree.h"
 #include "file.h"
-
+#include "CircularLinkedList.h"
+#include "conversion.h"
 int main(void)
 {
 	int choice;
 	printf("Your Options \n ");
-	printf(" 1. LinkedList Operations \n");
-	printf(" 2. Stack Operations \n ");
-	printf(" 3. tree \n ");
-	printf(" 4. extraction of a file \n");
+	printf(" 1. LinkedList Operations\n");
+	printf(" 2. Stack Operations\n");
+	printf(" 3. tree\n");
+	printf(" 4. extraction of a file\n");
+	printf(" 5. circular linked list\n");
+	printf(" 6. conversion decimal and binary");
 	scanf("%d",&choice);
 	switch (choice)
 	{
@@ -28,8 +31,15 @@ int main(void)
 	tree::showTreeOptions();
 		break;
 	case 4:file();
-	default:
+	
 		break;
+	case 5:circularlinked();
+		break;
+	case 6:conversion();
+	default:
+		printf("wrong choice");
+
+		
 	}
 }
 

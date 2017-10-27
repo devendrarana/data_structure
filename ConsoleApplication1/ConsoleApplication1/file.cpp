@@ -1,9 +1,9 @@
 #include"stdafx.h"
-
+#include<conio.h>
 void file() {
 	char ch;
 	FILE *fp;
-	fp = fopen("rana.resx", "r");
+	fp = fopen("C:\\Users\\Devendra Rana\\Desktop\\rana2.txt", "r");
 	if (fp == NULL) {
 		printf("it is emPty");
 		exit(1);
@@ -14,7 +14,7 @@ void file() {
 		printf("%c", ch);
 		ch = fgetc(fp);
 	}
-
+	
 	fclose(fp);
-
+	getch();
 }
