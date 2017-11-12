@@ -9,3 +9,4 @@ struct node {
 void binarytree();
 struct node * insert(int d,struct node *root);
 void inorderdisplay(struct node *t);
+int getHeight(struct node* node);

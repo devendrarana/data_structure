@@ -3,11 +3,12 @@
 struct node *root = NULL;
 void binarytree(){
 	
-	int choice,value;
+	int choice,value,h;
 	while (1) {
 		printf("entre 1 for insertion\n");
 		printf("entre 2 for dispaly\n");
-		printf("entre 3 for exit\n");
+		printf("entre 3 for height\n");
+		printf("entre 4 for exit\n");
 		printf("entre your choice\n");
 	
 		scanf("%d", &choice);
@@ -19,7 +20,10 @@ void binarytree(){
 		case 2:
 			inorderdisplay(root);
 			break;
-		case 3: exit(1);
+		case 3:h= getHeight(root);
+			printf("Height of the tree is %d", h);
+			break;
+		case 4: exit(1);
 		default:
 			printf("wrong choice");
 	}
@@ -27,6 +31,21 @@ void binarytree(){
 
 
 }
+
+int getHeight(struct node* node ) {
+
+	if (node == NULL) {
+		return 0;
+	}
+
+	int leftTreeHeight = getHeight(node->left);
+	int rightTreeHeight = getHeight(node->right);
+
+	return leftTreeHeight > rightTreeHeight ? leftTreeHeight + 1 : rightTreeHeight + 1;
+
+
+}
+
 struct node* insert(int d,struct node *root)
 {
 	struct node *p,*t = (struct node *)malloc(sizeof(struct node));
