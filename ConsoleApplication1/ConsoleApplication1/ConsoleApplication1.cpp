@@ -9,6 +9,10 @@
 #include "CircularLinkedList.h"
 #include "conversion.h"
 #include "doublelinked.h"
+#include "BinaryTree.h"
+#include "stackarray.h"
+#include "file2.h"
+#include "file3.h"
 int main(void)
 {
 	int choice;
@@ -18,8 +22,12 @@ int main(void)
 	printf(" 3. tree\n");
 	printf(" 4. extraction of a file\n");
 	printf(" 5. circular linked list\n");
-	printf(" 6. conversion decimal and binary");
-	printf(" 7. doublelinkedlist");
+	printf(" 6. conversion decimal and binary\n");
+	printf(" 7. doublelinkedlist\n");
+	printf(" 8. Binarytree\n");
+	printf(" 9. Stack using array\n");
+	printf(" 10. file using fgets\n");
+	printf(" 11.file using fwrite");
 	scanf("%d",&choice);
 	switch (choice)
 	{
@@ -40,6 +48,14 @@ int main(void)
 	case 6:conversion();
 		break;
 	case 7:doublelinked();
+		break;
+	case 8:binarytree();
+		break;
+	case 9:stackArray();
+		break;
+	case 10:file2();
+		break;
+	case 11:file3();
 		break;
 	default:
 		printf("wrong choice");

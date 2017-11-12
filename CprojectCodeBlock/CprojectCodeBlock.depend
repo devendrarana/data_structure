@@ -1,6 +1,13 @@
 # depslib dependency file v1.0
 1508700940 source:c:\users\devendra rana\data-structure\test\data_structure\cprojectcodeblock\linkedlist.c
 
-1508701130 source:c:\users\devendra rana\data-structure\test\data_structure\cprojectcodeblock\main.c
-	<stdio.h>
+1510433311 source:c:\users\devendra rana\data-structure\test\data_structure\cprojectcodeblock\main.c
+
+1510425633 source:c:\users\devendra rana\data-structure\test\data_structure\cprojectcodeblock\graphic.c
+
+1510431864 source:c:\users\devendra rana\data-structure\test\data_structure\cprojectcodeblock\laptop.cpp
+	<graphics.h>
+
+1510433486 source:c:\users\devendra rana\data-structure\test\data_structure\cprojectcodeblock\graphic1.cpp
+	<graphics.h>
 

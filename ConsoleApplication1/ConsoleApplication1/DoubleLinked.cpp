@@ -54,7 +54,7 @@ struct dnode*insert(int value) {
 		
 		tmp->left = t;
 		t->right = tmp;
-
+		tmp->right = NULL;
 		return head;
 
 	}
@@ -63,6 +63,7 @@ struct dnode*insert(int value) {
 struct dnode *deletion(int value) {
 	struct dnode *t,*p;
 	t = head;
+	;
 	while (t->info != value)
 	{
 		t = t->right;
@@ -75,10 +76,11 @@ struct dnode *deletion(int value) {
 }
 void display(struct dnode *head) {
 	struct dnode*t=head;
-	while (t->right != NULL)
+	while (t!= NULL)
+	{
 		printf("%d ", t->info);
 		t = t->right;
-	
+	}
 
 
 }
