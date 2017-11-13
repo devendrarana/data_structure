@@ -13,6 +13,7 @@
 #include "stackarray.h"
 #include "file2.h"
 #include "file3.h"
+#include "file4.h"
 int main(void)
 {
 	int choice;
@@ -27,7 +28,8 @@ int main(void)
 	printf(" 8. Binarytree\n");
 	printf(" 9. Stack using array\n");
 	printf(" 10. file using fgets\n");
-	printf(" 11.file using fwrite");
+	printf(" 11.file using fwrite\n");
+	printf(" 12.file using fprintf\n");
 	scanf("%d",&choice);
 	switch (choice)
 	{
@@ -56,6 +58,8 @@ int main(void)
 	case 10:file2();
 		break;
 	case 11:file3();
+		break;
+	case 12:file4();
 		break;
 	default:
 		printf("wrong choice");

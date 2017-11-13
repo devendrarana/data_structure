@@ -157,6 +157,7 @@
     <ClInclude Include="file.h" />
     <ClInclude Include="file2.h" />
     <ClInclude Include="file3.h" />
+    <ClInclude Include="file4.h" />
     <ClInclude Include="func1.h" />
     <ClInclude Include="linked.h" />
     <ClInclude Include="resource.h" />
@@ -178,6 +179,7 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</CompileAs>
     </ClCompile>
     <ClCompile Include="FILE3.cpp" />
+    <ClCompile Include="FILE4.cpp" />
     <ClCompile Include="func1.cpp" />
     <ClCompile Include="linked.cpp" />
     <ClCompile Include="Stack.cpp" />
