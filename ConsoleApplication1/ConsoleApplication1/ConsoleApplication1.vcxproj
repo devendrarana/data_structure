@@ -150,6 +150,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="avlTree.h" />
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="conversion.h" />
@@ -159,8 +160,14 @@
     <ClInclude Include="file3.h" />
     <ClInclude Include="file4.h" />
     <ClInclude Include="func1.h" />
+    <ClInclude Include="heapinsert.h" />
+    <ClInclude Include="insertAlgo.h" />
     <ClInclude Include="linked.h" />
+    <ClInclude Include="mergeSort.h" />
+    <ClInclude Include="quickSortAlgo.h" />
+    <ClInclude Include="radixsort.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="selectionSortAlgo.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="stackarray.h" />
     <ClInclude Include="stdafx.h" />
@@ -168,6 +175,7 @@
     <ClInclude Include="tree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="avlTree.cpp" />
     <ClCompile Include="BinarytoDecimal .cpp" />
     <ClCompile Include="binarytree.cpp" />
     <ClCompile Include="CircularLinkedList.cpp" />
@@ -181,7 +189,13 @@
     <ClCompile Include="FILE3.cpp" />
     <ClCompile Include="FILE4.cpp" />
     <ClCompile Include="func1.cpp" />
+    <ClCompile Include="heapinsert.cpp" />
+    <ClCompile Include="insertAlgo.cpp" />
     <ClCompile Include="linked.cpp" />
+    <ClCompile Include="mergeSort.cpp" />
+    <ClCompile Include="quickSortAlgo.cpp" />
+    <ClCompile Include="radixsort.cpp" />
+    <ClCompile Include="selectionSortAlgo.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="stackarray.cpp" />
     <ClCompile Include="stdafx.cpp">

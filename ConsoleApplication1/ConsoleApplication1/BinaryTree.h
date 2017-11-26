@@ -20,5 +20,5 @@ void printTabs(int count);
 void leveldisplay(struct node* root);
 void leveltraversal(struct node *root);
 void insertQueue(struct node *item);
-int deleteQueue();
+struct node* deleteQueue();
 int queueempty();

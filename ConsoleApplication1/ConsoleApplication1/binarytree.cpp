@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "BinaryTree.h"
 #include <queue>
+#define MAX 1500
 struct node *root = NULL;
 void binarytree() {
 
@@ -35,6 +36,7 @@ void binarytree() {
 
 			break;
 		case 7:leveltraversal(root);
+			break;
 		default:
 			printf("wrong choice");
 		}
@@ -143,14 +145,17 @@ void printTabs(int count) {
 }
 void leveldisplay(struct node *root) {
 
-	printf("\t\t \n\n");
-	printf("%d\t\t\t\t", root->left->data);
-	printf("%d\n", root->right->data);
+	printf("\t\t %d\n\n",root->data);
+	if(root->left)
+		printf("%d\t\t\t\t", root->left->data);
+	if(root->right)
+		printf("%d\n", root->right->data);
 	printf("\n");
 	leveldisplay(root->left);
+	
 	leveldisplay(root->right);
 }
-struct node *queue[MAX];
+struct node *nodeQueue[MAX];
 int front = -1, rear = -1;
 void insertQueue(struct node *item) {
 	if (rear == MAX - 1) {
@@ -160,22 +165,22 @@ void insertQueue(struct node *item) {
 	if (front == -1)
 		front = 0;
 	rear = rear + 1;
-	queue[rear] = item;
+	nodeQueue[rear] = item;
 }
 struct node *deleteQueue() {
 
 	struct node *item;
-	if (front = -1 || front = rear + 1) {
+	if (front == -1 || front == rear + 1) {
 		printf("underflow");
-		return 0;
+		return NULL;
 	}
-	item = queue[front];
+	item = nodeQueue[front];
 	front = front + 1;
 	return item;
 
 }
 int queueempty() {
-	if (front = -1 || front = rear + 1)
+	if (front ==-1 || front == rear + 1)
 		return 1;
 	else
 		return 0;
@@ -183,7 +188,7 @@ int queueempty() {
 }
 void leveltraversal(struct node *root) {
 	struct node *ptr = root;
-	if (ptr = NULL) {
+	if (ptr== NULL) {
 
 		printf("tree is empty");
 		printf("\n");
@@ -191,7 +196,7 @@ void leveltraversal(struct node *root) {
 	}
 	insertQueue(ptr);
 
-	while (queueempty() != NULL) {
+	while (!queueempty()) {
 		ptr = deleteQueue();
 		printf("%d", ptr->data);
 		if (ptr->left != NULL) {

@@ -31,7 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="graphic1.cpp" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

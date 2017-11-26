@@ -70,6 +70,27 @@
     <ClInclude Include="file4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="avlTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="insertAlgo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="selectionSortAlgo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="quickSortAlgo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mergeSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heapinsert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="radixsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -115,6 +136,27 @@
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FILE4.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="avlTree.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="insertAlgo.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="selectionSortAlgo.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quickSortAlgo.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mergeSort.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="heapinsert.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="radixsort.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
