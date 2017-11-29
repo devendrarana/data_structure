@@ -73,7 +73,7 @@ struct node *insert(struct node *pptr, int ikey) {
 	}
 
 		else if (ikey > pptr->info) {
-			pptr->right = insert(pptr->left, ikey);
+			pptr->right = insert(pptr->right, ikey);
 			if (taller == true) {
 				pptr = insert_right_check(pptr, &taller);
 			}

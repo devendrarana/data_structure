@@ -21,6 +21,10 @@
 #include "heapinsert.h"
 #include"radixsort.h"
 #include"avlTree.h"
+#include"Queue.h"
+#include"CircularQueue.h"
+#include"Graph1.h"
+#include"Graph2.h"
 int main(void)
 {
 	int choice;
@@ -44,6 +48,10 @@ int main(void)
 	printf(" 17.insertion heap\n");
 	printf(" 18.radix sort\n");
 	printf(" 19.avltree insertion and display\n");
+	printf(" 20.queue\n");
+	printf(" 21.circular queue\n");
+	printf(" 22.adjacency matrix\n");
+	printf(" 23.graph with edges\n");
 	scanf("%d",&choice);
 	switch (choice)
 	{
@@ -88,6 +96,15 @@ int main(void)
 	case 18:radixsort();
 		break;
 	case 19:avlTree();
+		break;
+	case 20:Queue();
+		break;
+	case 21:Cqueue();
+		break;
+	case 22:adjacent();
+		break;
+	case 23:Graph2();
+		break;
 	default:
 		printf("wrong choice");
 
